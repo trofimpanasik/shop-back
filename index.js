@@ -16,7 +16,7 @@ const PORT = process.env.PortServer
 
 //const whitelist = ["http://localhost:5173", "https://shop-ba9bb.web.app"]
 const corsOptions = {
-  origin: '*',
+  origin: 'https://shop-ba9bb.web.app/',
   credentials:true,
   optionsSuccessStatus: 200
 }
