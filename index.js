@@ -21,9 +21,7 @@ const PORT = process.env.PortServer
 //   optionsSuccessStatus: 200
 // }
 // app.use(cors(corsOptions))
-app.use(cors({
-  origin: '*'
-}));
+app.use(cors());
 app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/profile', profileRouter)
