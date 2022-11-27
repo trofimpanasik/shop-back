@@ -15,13 +15,12 @@ const server = httpServer.createServer(app)
 const PORT = process.env.PortServer
 
 //const whitelist = ["http://localhost:5173", "https://shop-ba9bb.web.app"]
-// const corsOptions = {
-//   origin: '*',
-//   credentials:true,
-//   optionsSuccessStatus: 200
-// }
-// app.use(cors(corsOptions))
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+  credentials:true,
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/profile', profileRouter)
