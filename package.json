@@ -17,5 +17,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.11.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@architect/sandbox": "^5.4.0"
   }
 }
