@@ -25,10 +25,10 @@ app.use(errorHandler)
 app.use('/static', express.static('public'))
 
 app.get('/', (req, res) => {
-  return res.send('Hello World')
+  return res.send('<div>Hello World</div>')
 })
 server.listen(PORT, () => console.log(`server listening on ${PORT}`))
 
 client.connect().catch(err => console.log(err))
 
-export default app
+export const App = app
