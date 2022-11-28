@@ -9,6 +9,7 @@ import profileRouter from "./src/profile/profile.js";
 import productRouter from "./src/products/products.js";
 
 import { errorHandler } from './middleware/error.js'
+import path from "path";
 
 const app = express()
 const server = httpServer.createServer(app)
@@ -21,14 +22,11 @@ app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/profile', profileRouter)
 app.use('/api/products', productRouter)
-app.use(errorHandler)
 app.use('/static', express.static('public'))
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+app.get('/test', (req, res) => {
+  res.send("<div>test</div>");
 })
 server.listen(PORT, () => console.log(`server listening on ${PORT}`))
 
 client.connect().catch(err => console.log(err))
-
-export const App = app
