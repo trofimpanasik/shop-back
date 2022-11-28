@@ -25,7 +25,7 @@ app.use(errorHandler)
 app.use('/static', express.static('public'))
 
 app.get('/', (req, res) => {
-  return res.send('<div>Hello World</div>')
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 server.listen(PORT, () => console.log(`server listening on ${PORT}`))
 
