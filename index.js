@@ -24,6 +24,9 @@ app.use('/api/products', productRouter)
 app.use(errorHandler)
 app.use('/static', express.static('public'))
 
+app.use('/', (req, res) => {
+  return res.send('Hello World')
+})
 server.listen(PORT, () => console.log(`server listening on ${PORT}`))
 
 client.connect().catch(err => console.log(err))
