@@ -30,3 +30,5 @@ app.get('/', (req, res) => {
 server.listen(PORT, () => console.log(`server listening on ${PORT}`))
 
 client.connect().catch(err => console.log(err))
+
+export default app
