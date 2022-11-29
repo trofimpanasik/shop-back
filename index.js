@@ -27,6 +27,6 @@ app.use('/static', express.static('public'))
 app.get('/test', (req, res) => {
   res.send("<div>test</div>");
 })
-server.listen(PORT,() => console.log(`server listening on ${PORT}`))
+server.listen(PORT, '10.100.31.123', () => console.log(`server listening on ${PORT}`))
 
 client.connect().catch(err => console.log(err))
